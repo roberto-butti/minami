@@ -358,7 +358,7 @@ function buildNav(members) {
 
     members.globals.forEach(function (item) {
       if (item.kind !== "typedef" && !hasOwnProp.call(seen, item.longname)) {
-        nav.push(buildNavItem(buildNavType(item.kind, linkto(item.longname, item.name))))
+        nav.push(buildNavItem(buildNavType(item.kind, linkto(item.longname, item.name, "",item.name))))
       }
 
       seen[item.longname] = true
